@@ -5,7 +5,7 @@ RUN go build -ldflags="-s -w" -tags netgo -trimpath -o go-proxy-bingai main.go
 
 FROM alpine
 WORKDIR /app
-COPY --from=builder /app/go-proxy-bingai .
+COPY --from=builder /app/bingai-chat .
 
 EXPOSE 8080
-CMD ["/app/go-proxy-bingai"]
+CMD ["/app/bingai-chat"]
