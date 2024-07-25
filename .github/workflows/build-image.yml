@@ -31,7 +31,7 @@ jobs:
           npm run build
           cd ..
 
-      - name: Commit latest webFile
+      - name: Commit latest web file
         run: |
           git config --global user.email "changdong.deng@qq.com"
           git config --global user.name "dengchangdong"
