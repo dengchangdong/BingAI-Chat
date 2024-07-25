@@ -1,4 +1,4 @@
-name: Build Go-Proxy-BingAI Nightly
+name: Build Docker image(Nightly)
 on:
   schedule:
     - cron: '0 16 * * *'
