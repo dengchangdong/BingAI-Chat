@@ -7,5 +7,5 @@ FROM alpine
 WORKDIR /app
 COPY --from=builder /app/bingai-chat .
 
-EXPOSE 8080
+EXPOSE 5050
 CMD ["/app/bingai-chat"]
