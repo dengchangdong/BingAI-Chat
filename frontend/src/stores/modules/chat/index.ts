@@ -28,10 +28,6 @@ export const useChatStore = defineStore(
         label: 'Bing 官方',
       },
       {
-        baseUrl: 'https://sydney.b1ng.chat',
-        label: 'Cloudflare Worker',
-      },
-      {
         baseUrl: location.origin,
         label: '本站',
       },
