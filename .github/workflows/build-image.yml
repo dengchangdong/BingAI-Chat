@@ -25,18 +25,18 @@ jobs:
 
       - name: Build Frontend
         run: |
-          rm -r web/* && git checkout web/web.go
+          rm -r ./web/* && git checkout ./web/web.go
           cd frontend
           npm install
           npm run build
-          cd ..
+          cd ./
 
       - name: Commit latest web file
         run: |
           git config --global user.email "changdong.deng@qq.com"
           git config --global user.name "dengchangdong"
-          git add web/*
-          git add frontend/package-lock.json
+          git add ./web/*
+          git add ./frontend/package-lock.json
           git commit -m "[Upgrade] Upload latest web file"
           git push origin HEAD:master
 
