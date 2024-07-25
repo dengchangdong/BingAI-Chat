@@ -7,3 +7,8 @@
 > #### Cloudflare Worker 部署
 >
 > [![Deploy to Cloudflare Workers](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/dengchangdong/BingAI-Chat)
+>
+> #### Vercel 部署
+>
+> [![Vercel 部署](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fdengchangdong%2FBingAI-Chat&env=BYPASS_SERVER&project-name=bingai-chat&repository-name=bingai-chat)
+
