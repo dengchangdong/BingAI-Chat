@@ -36,7 +36,6 @@ jobs:
           git config --global user.email "changdong.deng@qq.com"
           git config --global user.name "dengchangdong"
           git add web/*
-          git add frontend/package-lock.json
           git commit -m "[Upgrade] Upload latest web file"
           git push origin HEAD:master
 
