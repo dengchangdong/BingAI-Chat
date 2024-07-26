@@ -33,7 +33,6 @@ jobs:
 
       - name: Commit latest web file
         run: |
-          git checkout -b master
           git config --local user.email "8143207+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add .
