@@ -33,9 +33,9 @@ jobs:
 
       - name: Commit latest web file
         run: |
-          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.email "8143207+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add -f web/*
+          git add web/*
           git commit -m "[Upgrade] Upload latest web file"
           git push origin HEAD:master
 
