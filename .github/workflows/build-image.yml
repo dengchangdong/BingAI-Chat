@@ -36,7 +36,7 @@ jobs:
           git checkout -b master
           git config --local user.email "8143207+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add web/*
+          git add .
           git commit -m "[Upgrade] Upload latest web file"
           git push -f origin HEAD:master
 
@@ -45,13 +45,13 @@ jobs:
           GOOS=linux GOARCH=amd64 go build -ldflags="-s -w" -tags netgo -trimpath -o bingai-chat main.go && tar -zcvf bingai-chat-linux-amd64.tar.gz bingai-chat
           GOOS=linux GOARCH=arm64 go build -ldflags="-s -w" -tags netgo -trimpath -o bingai-chat main.go && tar -zcvf bingai-chat-linux-arm64.tar.gz bingai-chat
           GOOS=linux GOARCH=arm GOARM=7 go build -ldflags="-s -w" -tags netgo -trimpath -o bingai-chat main.go && tar -zcvf bingai-chat-linux-armv7.tar.gz bingai-chat
-          GOOS=windows GOARCH=amd64 go build -ldflags="-s -w" -tags netgo -trimpath -o bingai-chat.exe main.go && tar -zcvf bingai-chat-windows-amd64.tar.gz bingai-chat.exe
-          GOOS=windows GOARCH=arm64 go build -ldflags="-s -w" -tags netgo -trimpath -o bingai-chat.exe main.go && tar -zcvf bingai-chat-windows-arm64.tar.gz bingai-chat.exe
-          GOOS=darwin GOARCH=amd64 go build -ldflags="-s -w" -tags netgo -trimpath -o bingai-chat main.go && tar -zcvf bingai-chat-darwin-amd64.tar.gz bingai-chat
-          GOOS=darwin GOARCH=arm64 go build -ldflags="-s -w" -tags netgo -trimpath -o bingai-chat main.go && tar -zcvf bingai-chat-darwin-arm64.tar.gz bingai-chat
-          GOOS=freebsd GOARCH=amd64 go build -ldflags="-s -w" -tags netgo -trimpath -o bingai-chat main.go && tar -zcvf bingai-chat-freebsd-amd64.tar.gz bingai-chat
-          GOOS=freebsd GOARCH=arm64 go build -ldflags="-s -w" -tags netgo -trimpath -o bingai-chat main.go && tar -zcvf bingai-chat-freebsd-arm64.tar.gz bingai-chat
-          GOOS=freebsd GOARCH=arm GOARM=7 go build -ldflags="-s -w" -tags netgo -trimpath -o bingai-chat main.go && tar -zcvf bingai-chat-freebsd-armv7.tar.gz bingai-chat
+          #GOOS=windows GOARCH=amd64 go build -ldflags="-s -w" -tags netgo -trimpath -o bingai-chat.exe main.go && tar -zcvf bingai-chat-windows-amd64.tar.gz bingai-chat.exe
+          #GOOS=windows GOARCH=arm64 go build -ldflags="-s -w" -tags netgo -trimpath -o bingai-chat.exe main.go && tar -zcvf bingai-chat-windows-arm64.tar.gz bingai-chat.exe
+          #GOOS=darwin GOARCH=amd64 go build -ldflags="-s -w" -tags netgo -trimpath -o bingai-chat main.go && tar -zcvf bingai-chat-darwin-amd64.tar.gz bingai-chat
+          #GOOS=darwin GOARCH=arm64 go build -ldflags="-s -w" -tags netgo -trimpath -o bingai-chat main.go && tar -zcvf bingai-chat-darwin-arm64.tar.gz bingai-chat
+          #GOOS=freebsd GOARCH=amd64 go build -ldflags="-s -w" -tags netgo -trimpath -o bingai-chat main.go && tar -zcvf bingai-chat-freebsd-amd64.tar.gz bingai-chat
+          #GOOS=freebsd GOARCH=arm64 go build -ldflags="-s -w" -tags netgo -trimpath -o bingai-chat main.go && tar -zcvf bingai-chat-freebsd-arm64.tar.gz bingai-chat
+          #GOOS=freebsd GOARCH=arm GOARM=7 go build -ldflags="-s -w" -tags netgo -trimpath -o bingai-chat main.go && tar -zcvf bingai-chat-freebsd-armv7.tar.gz bingai-chat
 
       - name: Create Release and Upload Release Asset
         uses: softprops/action-gh-release@v1
